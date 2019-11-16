@@ -1,0 +1,11 @@
+c:\Users\Shirish\Projects\workspace\Heist-Plan\obj\Debug\netcoreapp3.0\Heist-Plan.csprojAssemblyReference.cache
+c:\Users\Shirish\Projects\workspace\Heist-Plan\obj\Debug\netcoreapp3.0\Heist-Plan.AssemblyInfoInputs.cache
+c:\Users\Shirish\Projects\workspace\Heist-Plan\obj\Debug\netcoreapp3.0\Heist-Plan.AssemblyInfo.cs
+C:\Users\Shirish\Projects\workspace\Heist-Plan\bin\Debug\netcoreapp3.0\Heist-Plan.exe
+C:\Users\Shirish\Projects\workspace\Heist-Plan\bin\Debug\netcoreapp3.0\Heist-Plan.deps.json
+C:\Users\Shirish\Projects\workspace\Heist-Plan\bin\Debug\netcoreapp3.0\Heist-Plan.runtimeconfig.json
+C:\Users\Shirish\Projects\workspace\Heist-Plan\bin\Debug\netcoreapp3.0\Heist-Plan.runtimeconfig.dev.json
+C:\Users\Shirish\Projects\workspace\Heist-Plan\bin\Debug\netcoreapp3.0\Heist-Plan.dll
+C:\Users\Shirish\Projects\workspace\Heist-Plan\bin\Debug\netcoreapp3.0\Heist-Plan.pdb
+C:\Users\Shirish\Projects\workspace\Heist-Plan\obj\Debug\netcoreapp3.0\Heist-Plan.dll
+C:\Users\Shirish\Projects\workspace\Heist-Plan\obj\Debug\netcoreapp3.0\Heist-Plan.pdb
