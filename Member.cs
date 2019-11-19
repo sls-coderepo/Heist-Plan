@@ -6,7 +6,7 @@ namespace Heist_Plan
     {
         public string Name { get; set; }
         public int SkillLevel { get; set; }
-        public double CourageFactor { get; set; }
+        public decimal CourageFactor { get; set; }
 
         public Member()
         {
