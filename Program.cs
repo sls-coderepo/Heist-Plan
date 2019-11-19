@@ -7,35 +7,34 @@ namespace Heist_Plan
     {
         static void Main(string[] args)
         {
-            Dictionary<string, Dictionary<string, decimal>> members = new Dictionary<string, Dictionary<string, decimal>>();
             string message = "Plane Your Heist!";
             Console.WriteLine(message);
+            Console.WriteLine("==============================================");
 
-            string name;
-            int skillLevel;
-            decimal courageFactor;
+            List<Member> members = new List<Member>();
+
 
             bool startAgain = true;
             string reply;
 
-
+            int bankDifficultLevel = 100;
+            decimal totalSkillLevel = 0;
+            //Prompt for user input
             while (startAgain)
             {
+                Member member = new Member();
+
                 Console.WriteLine("What is your name?");
-                name = Console.ReadLine();
-                if (name == "")
+                member.Name = Console.ReadLine();
+                if (member.Name == "")
                 {
                     break;
                 }
                 Console.WriteLine("What is your skill level?");
-                skillLevel = Convert.ToInt32(Console.ReadLine());
+                member.SkillLevel = Convert.ToInt32(Console.ReadLine());
 
                 Console.WriteLine("What is your Courage Factor? (0.0 - 2.0)");
-                courageFactor = Convert.ToDecimal(Console.ReadLine());
-
-                members.Add(name, new Dictionary<string, decimal>()
-                { { "skillLevel", skillLevel }, { "courageFactor", courageFactor }
-                });
+                member.CourageFactor = Convert.ToDouble(Console.ReadLine());
 
                 Console.Write("Add new member? (Y or N):  ");
                 reply = Console.ReadLine();
@@ -44,16 +43,47 @@ namespace Heist_Plan
                 {
                     startAgain = false;
                 }
-
+                // adding member to the member list
+                members.Add(member);
             }
+            Console.WriteLine("==============================================");
+            Console.WriteLine($"There are {members.Count} members in your team!");
 
-            Console.WriteLine($"There are {members.Count} in your team!");
 
-            foreach (KeyValuePair<string, Dictionary<string, decimal>> member in members)
+            foreach (var member in members)
             {
-                Console.WriteLine($"{member.Key} has skill of {member.Value["skillLevel"]} and courage of {member.Value["courageFactor"]}");
+                Console.WriteLine($"{member.Name} has skill of {member.SkillLevel} and courage of {member.CourageFactor}");
             }
+            Console.WriteLine("==============================================");
+
+            //adding skill level
+            foreach (var member in members)
+            {
+                totalSkillLevel += member.SkillLevel;
+
+            }
+            // Random Number 
+            Random rand = new Random();
+            bankDifficultLevel += rand.Next(-10, 10);
+
+
+            Console.WriteLine($"Bank Difficulty Level-- {bankDifficultLevel}");
+            Console.WriteLine($"Total Skill Level-- {totalSkillLevel}");
+            if (totalSkillLevel >= bankDifficultLevel)
+            {
+                Console.WriteLine("We have enough skill level to heist the bank!");
+            }
+            else
+            {
+                Console.WriteLine("Sorry, We cant heist the bank!");
+            }
+
+
+
+
+
 
         }
+
     }
 }
