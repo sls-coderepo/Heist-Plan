@@ -90,8 +90,8 @@ namespace Heist_Plan
             }
             // Random Number 
             Random rand = new Random();
-
-
+            int numOfSuccess = 0;
+            int numOfFailure = 0;
 
             Console.Write("Enter number of trial runs: ");
             int numberOfTrail = Convert.ToInt32(Console.ReadLine());
@@ -103,10 +103,12 @@ namespace Heist_Plan
 
                 if (totalSkillLevel >= currentBankDifficultLevel)
                 {
+                    numOfSuccess++;
                     Console.WriteLine("We have enough skill level to heist the bank!");
                 }
                 else
                 {
+                    numOfFailure++;
                     Console.WriteLine("Sorry, We cant heist the bank!");
                 }
                 Console.WriteLine($"Bank Difficulty Level-- {currentBankDifficultLevel}");
@@ -114,6 +116,7 @@ namespace Heist_Plan
 
             }
 
+            Console.WriteLine($"There are {numOfSuccess} round of success and {numOfFailure} round of fail attempts!");
 
         }
 
